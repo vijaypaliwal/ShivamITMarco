@@ -93,8 +93,8 @@
         Otherwise, you can specify specific domains:
     -->
 
-        <access origin="http://mobile.shivamitconsultancy*" subdomains="true"/>               
-
+                     
+<access origin="*" />
        <!-- allow any secure requests to http://mobile.shivamitconsultancy.com/-->	        
 
     <!--
