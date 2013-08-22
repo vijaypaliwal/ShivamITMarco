@@ -21,7 +21,7 @@
 
 'use strict';
 
-var DEFAULT_URL = 'sample.pdf';
+var DEFAULT_URL = 'http://demo.shivamitconsultancy.com/temp/demo3/sample.pdf';
 var DEFAULT_SCALE = 'auto';
 var DEFAULT_SCALE_DELTA = 1.1;
 var UNKNOWN_SCALE = 0;

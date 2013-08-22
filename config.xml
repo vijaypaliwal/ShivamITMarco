@@ -94,7 +94,7 @@
     -->
 
                      
-<access origin="*" />
+<access origin="http://demo.shivamitconsultancy.com/temp/demo3/sample.pdf" />
        <!-- allow any secure requests to http://mobile.shivamitconsultancy.com/-->	        
 
     <!--
