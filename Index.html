@@ -65,15 +65,29 @@
             position: absolute;
             z-index: 1;
             top: 45px;
-            bottom: 2px;
-            left: 5px;
-            width: 99%;
+            bottom: 10px;
+            left: 1px;
+            width: 100%;
             background: #aaa;
             overflow: auto;
             margin: 0px auto;
             text-align: justify;
         }
+        .Navbutton {
+bottom:0px;
+ position: absolute;
+            z-index: 3;
+            
+        }
 
+        .right {
+            float:right;
+            left:90%;
+        }
+        .left {
+            float:left;
+            left:5px;
+        }
         #scroller {
             position: absolute;
             /* -webkit-touch-callout:none;*/
@@ -99,6 +113,9 @@
                 <div id="scroller">
                     som etxt etehkjeh
                 </div>
+                   
+                <a href="#" id="nextbutton" class="Navbutton right" data-transition="slideLeft" data-role="button" data-theme="b" data-iconpos="notext" data-icon="arrow-r">Next</a>
+                <a href="#" id="prebutton" class="Navbutton left" data-role="button" data-theme="b"  data-iconpos="notext" data-icon="arrow-l">Pre</a>
             </div>
 
         </div>
@@ -118,6 +135,8 @@
             </div>
         </div>
 
+       
+
     </div>
 </body>
 </html>
@@ -126,37 +145,30 @@
     var counter = 1;
     var MaxLimit = 4;
     var FolderName = "Washer";
-    $(function () {
+   
+    $(document).ready(function () {
+
+        $("#scroller").empty();
+        $("#scroller").load("Data/" + FolderName + "/page" + counter + ".html");
 
         // Bind the swipeleftHandler callback function to the swipe event on div.box
-        $("div#scroller").on("swipeleft", swipeleftHandler);
-        $("div#scroller").on("swiperight", swiperightHandler);
-
-        // Callback function references the event target and adds the 'swipeleft' class to it
-        function swipeleftHandler(event) {
+        $("#nextbutton").click(function () {
             if (counter > MaxLimit)
                 counter = 1;
             else
                 counter++;
 
-            $("#scroller").load("Data/" + FolderName + "/page" + counter + ".html").slide(300);
-        }
+            $("#scroller").load("Data/" + FolderName + "/page" + counter + ".html");
 
-        // Callback function references the event target and adds the 'swipeleft' class to it
-        function swiperightHandler(event) {
+        });
+        $("#prebutton").click(function () {
             if (counter <= 1)
                 counter = 1;
             else
                 counter--;
 
-            $("#scroller").hide("slow").load("Data/" + FolderName + "/page" + counter + ".html").show("slow");
-
-        }
-    });
-    $(document).ready(function () {
-
-        $("#scroller").empty();
-        $("#scroller").load("Data/" + FolderName + "/page" + counter + ".html");
+            $("#scroller").load("Data/" + FolderName + "/page" + counter + ".html");
+        });
 
         $("#mypanel ul li a").click(function () {
             var url = $(this).attr("tag");
@@ -171,7 +183,7 @@
             FolderName = $(this).attr("folderName");
         });
 
-
+        
 
     });
 
