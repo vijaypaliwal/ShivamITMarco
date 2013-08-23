@@ -1,16 +1,53 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1, minimum-scale=1.0, maximum-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>Untitled Document</title>
-  
-   
-      <script src="jquery-mobile/jquery-1.5.min.js" type="text/javascript"></script>
+    <link href="jquery-mobile/jquery.mobile-1.0a3.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="jquery-mobile/jquery-1.5.min.js" type="text/javascript"></script>
     <script src="jquery-mobile/jquery.mobile-1.0a3.min.js" type="text/javascript"></script>
-      <link href="jquery-mobile/jquery.mobile-1.0a3.min.css" rel="stylesheet" type="text/css" />
-   
+
+    <style>
+
+        .sidebar {
+            background-image: url('bg.png'); background-repeat: repeat;
+        }
+        .sidebarInner {
+            margin: 2px; border: 10px solid #410707; background-color: green;
+            color:white;
+            font-family:'Segoe UI';
+            text-align:center;
+        }
+            .sidebarInner label {
+              line-height:20px;
+              letter-spacing:2px;
+              margin-top:40px;
+            }
+
+        .list li {
+            text-align:left;
+            padding:10px;
+            color:#fff !important;
+            list-style:none !important;
+            text-decoration:none !important;
+            text-shadow:none;
+            
+        }
+          .list li a {
+            text-align:left;
+            padding:10px;
+            color:#fff !important;
+            list-style:none !important;
+            text-decoration:none !important;
+            text-shadow:none;
+            
+        }
+    </style>
+
+
 </head>
 
 <body>
@@ -24,35 +61,25 @@
 
             <div id="wrapper">
                 <div id="scroller">
-                   <h1>Welcome, MyMarcone APP</h1>
-                    <p>Some text goes here Some text goes here Some text goes here Some text goes here Some text goes here Some text goes here Some text goes here 
-                        Some text goes here Some text goes here Some text goes here Some text goes here Some text goes here Some text goes here Some text goes here Some text goes here 
-                        Some text goes here Some text goes here Some text goes here Some text goes here Some text goes here Some text goes here Some text goes here 
-                    </p>
-                    <p>Some text goes here Some text goes here Some text goes here Some text goes here Some text goes here Some text goes here Some text goes here 
-                        Some text goes here Some text goes here Some text goes here Some text goes here Some text goes here Some text goes here Some text goes here Some text goes here 
-                        Some text goes here Some text goes here Some text goes here Some text goes here Some text goes here Some text goes here Some text goes here 
-                    </p>
-                    <p>Some text goes here Some text goes here Some text goes here Some text goes here Some text goes here Some text goes here Some text goes here 
-                        Some text goes here Some text goes here Some text goes here Some text goes here Some text goes here Some text goes here Some text goes here Some text goes here 
-                        Some text goes here Some text goes here Some text goes here Some text goes here Some text goes here Some text goes here Some text goes here 
-                    </p>
+                   som etxt etehkjeh
                 </div>
             </div>
 
         </div>
 
-        <div data-role="panel" id="mypanel" data-position="right" data-display="push">
-            <h4>MyMarcone Manual</h4>
-            <ul data-role="listview" data-inset="false" data-theme="b">
+        <div data-role="panel" id="mypanel" data-position="right" data-display="push" class="sidebar">
+            <div class="sidebarInner">
+                <label>Basic Training Guides</label>
+                <ul class="list" style="margin-top:40px;">
 
-                <li><a href="#" tag="washer.html" title="Washer menu">Washer</a></li>
-                <li><a href="#" tag="Refrig.html" title="Dryer menu">Dryer</a></li>
+                    <li><a href="#" tag="Data/Washer/page1.html" title="Washer menu" MaxCounter="4" folderName="Washer">Washer</a></li>
+                    <li><a href="#" tag="Data/Dryer/page1.html" title="Dryer menu" MaxCounter="2" folderName="Dryer">Dryer</a></li>
 
-                <li><a href="#" title="Dishwasher menu">Dishwasher</a></li>
-                <li><a href="#" title="Microwave menu">Microwave</a></li>
-            </ul>
+                    <li><a href="#" title="Dishwasher menu">Dishwasher</a></li>
+                    <li><a href="#" title="Microwave menu">Microwave</a></li>
+                </ul>
 
+            </div>
         </div>
 
     </div>
@@ -60,8 +87,41 @@
 </html>
 
 <script>
+var counter=1;
+var MaxLimit=4;
+var FolderName = "Washer";
+$(function(){
 
+  // Bind the swipeleftHandler callback function to the swipe event on div.box
+  $( "div#wrapper" ).on( "swipeleft", swipeleftHandler );
+   $( "div#wrapper" ).on( "swiperight", swiperightHandler );
+ 
+  // Callback function references the event target and adds the 'swipeleft' class to it
+  function swipeleftHandler( event ){
+		if(counter>MaxLimit)
+		  counter=1;
+	    else
+		  counter++;
+	
+	$("#scroller").load("Data/"+ FolderName +"/page"+counter+".html").slide(300);
+  }
+  
+  // Callback function references the event target and adds the 'swipeleft' class to it
+  function swiperightHandler( event ){
+		if(counter<= 1)
+		  counter=1;
+	    else
+		  counter--;
+	 
+	    $("#scroller").load("Data/" + FolderName + "/page" + counter + ".html");
+	 
+  }
+});
     $(document).ready(function () {
+	 
+			 $("#scroller").empty();
+			 $("#scroller").load("Data/" + FolderName + "/page" + counter + ".html");
+	
         $("#mypanel ul li a").click(function () {
             var url = $(this).attr("tag");
             var title = $(this).attr("title");
@@ -70,11 +130,16 @@
             $("#title").empty();
             $("#title").html(title);
             $("#mypanel").panel("close");
+            counter = 1;
+            MaxLimit = $(this).attr("MaxCounter");
+            FolderName = $(this).attr("folderName");
         });
 
+
+
+    });
+
+    $(document).bind("mobileinit", function (event) {
+        $.extend($.mobile.zoom, { locked: false, enabled: true });
     });
 </script>
-
-
-
-  
