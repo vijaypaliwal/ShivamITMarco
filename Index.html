@@ -1,268 +1,50 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1, minimum-scale=1.0, maximum-scale=1.0">
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]>    <html class="no-js iem7"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap PDF Viewer</title>
+    <meta name="description" content="">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="cleartype" content="on">
+
+    <!-- For iOS web apps. Delete if not needed. https://github.com/h5bp/mobile-boilerplate/issues/94 -->    
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <title>Untitled Document</title>
-    <link href="jquery-mobile/jquery.mobile-1.0a3.min.css" rel="stylesheet" type="text/css" />
+    <meta name="apple-mobile-web-app-title" content="">
+    
+    <!-- Twitter Bootstrap -->
+    <link rel="stylesheet" href="lib/twitter-bootstrap/css/bootstrap.css">
 
-    <script src="jquery-mobile/jquery-1.5.min.js" type="text/javascript"></script>
-    <script src="jquery-mobile/jquery.mobile-1.0a3.min.js" type="text/javascript"></script>
-    <script type="application/javascript" src="jquery-mobile/iscroll.js"></script>
-    <script type="text/javascript">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.css">
 
-        var myScroll;
-        function loaded() {
-            myScroll = new iScroll('wrapper', { zoom: true });
-        }
+    <!-- Bootstrap PDF Viewer -->
+    <link rel="stylesheet" href="css/bootstrap-pdf-viewer.css">
+  </head>
+  <body>
 
-        document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    <!-- Bootstrap PDF Viewer -->
+    <div id="viewer" class="pdf-viewer" data-url="sample.pdf"></div>
 
-        document.addEventListener('DOMContentLoaded', loaded, false);
+    <!-- jQuery -->
+    <script src="lib/jquery-1.9.1.js"></script>
 
+    <!-- Twitter Bootstrap -->
+    <script src="lib/twitter-bootstrap/js/bootstrap.js"></script>
+
+    <!-- Bootstrap PDF Viewer -->
+    <script src="lib/pdf.js"></script>
+    <script src="js/bootstrap-pdf-viewer.js"></script>
+
+    <script>
+      var viewer;
+
+      $(function() {
+        viewer = new PDFViewer($('#viewer'));
+      });
     </script>
-    <style>
-        .sidebar {
-            background-image: url('bg.png');
-            background-repeat: repeat;
-        }
-
-        .sidebarInner {
-            margin: 2px;
-            border: 10px solid #410707;
-            background-color: green;
-            color: white;
-            font-family: 'Segoe UI';
-            text-align: center;
-        }
-
-            .sidebarInner label {
-                line-height: 20px;
-                letter-spacing: 2px;
-                margin-top: 40px;
-            }
-
-        .list li {
-            text-align: left;
-            padding: 10px;
-            color: #fff !important;
-            list-style: none !important;
-            text-decoration: none !important;
-            text-shadow: none;
-        }
-
-            .list li a {
-                text-align: left;
-                padding: 10px;
-                color: #fff !important;
-                list-style: none !important;
-                text-decoration: none !important;
-                text-shadow: none;
-            }
-
-
-        .Navbutton {
-            bottom: 0px;
-            position: absolute;
-            z-index: 3;
-        }
-
-        .right {
-            float: right;
-            left: 90%;
-        }
-
-        .left {
-            float: left;
-            left: 5px;
-        }
-    </style>
-    <style type="text/css" media="all">
-        body, ul, li {
-            padding: 0;
-            margin: 0;
-            border: 0;
-        }
-
-        body {
-            font-size: 12px;
-            -webkit-user-select: none;
-            -webkit-text-size-adjust: none;
-            font-family: helvetica;
-        }
-
-        #header {
-            position: absolute;
-            z-index: 2;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 45px;
-            line-height: 45px;
-            background-color: #d51875;
-            background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #fe96c9), color-stop(0.05, #d51875), color-stop(1, #7b0a2e));
-            background-image: -moz-linear-gradient(top, #fe96c9, #d51875 5%, #7b0a2e);
-            background-image: -o-linear-gradient(top, #fe96c9, #d51875 5%, #7b0a2e);
-            padding: 0;
-            color: #eee;
-            font-size: 20px;
-            text-align: center;
-        }
-
-            #header a {
-                color: #f3f3f3;
-                text-decoration: none;
-                font-weight: bold;
-                text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
-            }
-
-        #footer {
-            position: absolute;
-            z-index: 2;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 48px;
-            background-color: #222;
-            background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0, #999), color-stop(0.02, #666), color-stop(1, #222));
-            background-image: -moz-linear-gradient(top, #999, #666 2%, #222);
-            background-image: -o-linear-gradient(top, #999, #666 2%, #222);
-            padding: 0;
-            border-top: 1px solid #444;
-        }
-
-        #wrapper {
-            position: absolute;
-            z-index: 1;
-            top: 45px;
-            bottom: 48px;
-            left: 0;
-            width: 100%;
-            background: #aaa;
-            overflow: auto;
-        }
-
-        #scroller {
-            position: absolute;
-            z-index: 1;
-            /*	-webkit-touch-callout:none;*/
-            -webkit-tap-highlight-color: rgba(0,0,0,0);
-            width: 100%;
-            padding: 0;
-            background-color:#fff;
-        }
-
-            #scroller ul {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-                width: 100%;
-                text-align: left;
-            }
-
-            #scroller li {
-                padding: 0 10px;
-                height: 40px;
-                line-height: 40px;
-                border-bottom: 1px solid #ccc;
-                border-top: 1px solid #fff;
-                background-color: #fafafa;
-                font-size: 14px;
-            }
-    </style>
-
-
-</head>
-
-<body >
-     
-        <div data-role="header" id="header">
-            <h1 id="title">MyMarcone</h1>
-            <a href="#mypanel" data-role="button"  style="top:3px;position:absolute;" data-theme="b" data-iconpos="notext" data-icon="grid">Open</a>
-        </div>
-
-     
-
-            <div id="wrapper" data-theme="b" >
-                <div id="scroller">
-                    som etxt etehkjeh
-                </div>
-
-               
-            </div>
-
-    <div id="footer">
-         <a href="#" id="nextbutton" class="Navbutton right" data-transition="slideLeft" data-role="button" data-theme="b" data-iconpos="notext" data-icon="arrow-r">Next</a>
-                <a href="#" id="prebutton" class="Navbutton left" data-role="button" data-theme="b" data-iconpos="notext" data-icon="arrow-l">Pre</a>
-    </div>
-
-        <div data-role="panel" id="mypanel" data-position="right" data-display="push" class="sidebar">
-            <div class="sidebarInner">
-                <label>Basic Training Guides</label>
-                <ul class="list" style="margin-top: 40px;">
-
-                    <li><a href="#" tag="Data/Washer/page1.html" title="Washer menu" maxcounter="4" foldername="Washer">Washer</a></li>
-                    <li><a href="#" tag="Data/Dryer/page1.html" title="Dryer menu" maxcounter="2" foldername="Dryer">Dryer</a></li>
-
-                    <li><a href="#" title="Dishwasher menu">Dishwasher</a></li>
-                    <li><a href="#" title="Microwave menu">Microwave</a></li>
-                </ul>
-
-            </div>
-        </div>
-
-
-
-     
-</body>
+  </body>
 </html>
-
-<script>
-    var counter = 1;
-    var MaxLimit = 4;
-    var FolderName = "Washer";
-
-    $(document).ready(function () {
-
-        $("#scroller").empty();
-        $("#scroller").load("Data/" + FolderName + "/page" + counter + ".html");
-
-        // Bind the swipeleftHandler callback function to the swipe event on div.box
-        $("#nextbutton").click(function () {
-            if (counter > MaxLimit)
-                counter = 1;
-            else
-                counter++;
-
-            $("#scroller").load("Data/" + FolderName + "/page" + counter + ".html");
-
-        });
-        $("#prebutton").click(function () {
-            if (counter <= 1)
-                counter = 1;
-            else
-                counter--;
-
-            $("#scroller").load("Data/" + FolderName + "/page" + counter + ".html");
-        });
-
-        $("#mypanel ul li a").click(function () {
-            var url = $(this).attr("tag");
-            var title = $(this).attr("title");
-            $("#scroller").empty();
-            $("#scroller").load(url);
-            $("#title").empty();
-            $("#title").html(title);
-            $("#mypanel").panel("close");
-            counter = 1;
-            MaxLimit = $(this).attr("MaxCounter");
-            FolderName = $(this).attr("folderName");
-        });
-
-
-
-    });
-
-
-</script>
