@@ -1,0 +1,160 @@
+﻿<link rel="stylesheet" href="../../jquery-mobile/jquery.mobile-1.3.2.min.css" />
+<script src="../../jquery-mobile/jquery-1.9.1.min.js"></script>
+<script src="../../jquery-mobile/jquery.mobile-1.3.2.min.js"></script>
+<script type="application/javascript" src="../../iscroll.js"></script>
+
+
+<style>
+    .pagesList {
+        list-style: none;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 71px;
+        padding: 0px;
+        width: 98%;
+    }
+
+        .pagesList li {
+            position: relative;
+            background-color: white;
+            border: 1px solid #999;
+            margin-bottom:5px;
+            -webkit-box-shadow:  1px 2px 2px 1px rgba(0, 0, 0, 1);
+        
+        box-shadow:  1px 2px 2px 1px rgba(0, 0, 0, 1);
+        }
+</style>
+
+<div data-role="page">
+
+
+   
+
+    <div data-position="fixed" data-tap-toggle="false" id="Microwaveheader" data-role="header">
+        <h1>Microwave Menu</h1>
+        <a href="#mypanel" data-role="button" data-theme="b">menu</a>
+    </div>
+
+
+   <div id="wrapper">
+        <div id="scroller">
+            <ul class="pagesList">
+           
+          
+                <li id="page1">Loading.....</li>
+                <li id="page2">Loading.....</li>
+                  <li id="page3">Loading.....</li>
+                 <li id="page4">Loading.....</li>
+                 <li id="page5">Loading.....</li>
+                 <li id="page6">Loading.....</li>
+                 <li id="page7">Loading.....</li>
+                 <li id="page8">Loading.....</li>
+                    <li id="page9">Loading.....</li>
+                    <li id="page10">Loading.....</li>
+                  <li id="page11">Loading.....</li>
+                    <li id="page12">Loading.....</li>
+                 <li id="page13">Loading.....</li>
+                   <li id="page14">Loading.....</li>
+                   <li id="page15">Loading.....</li>
+                   <li id="page16">Loading.....</li>
+                   <li id="page17">Loading.....</li>
+                   <li id="page18">Loading.....</li>
+                   <li id="page19">Loading.....</li>   
+                <li id="page20">Loading.....</li>
+                   <li id="page21">Loading.....</li>
+                   <li id="page22">Loading.....</li>
+                   <li id="page23">Loading.....</li>
+                     <li id="page24">Loading.....</li>
+                     <li id="page25">Loading.....</li>
+                     <li id="page26">Loading.....</li>
+                     <li id="page27">Loading.....</li>
+                  <li id="page28">Loading.....</li>
+                  <li id="page29">Loading.....</li>
+                  <li id="page30">Loading.....</li>
+            
+            
+            </ul>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <div data-role="panel" id="mypanel" data-position="right" data-display="push">
+        <h4>MyMarcone Manual</h4>
+        <ul data-role="listview" data-inset="false" data-theme="b">
+
+            <li><a data-ajax="false" href="../../index.html" title="Washer menu">Washer</a></li>
+            <li><a data-ajax="false" href="../../Page/Dryer/Dryerhistory.html" title="Dryer menu">Dryer</a></li>
+            <li><a data-ajax="false" href="../../Page/Dishwasher/Dishwasherhistory.html" title="Dishwasher menu">Dishwasher</a></li>
+            <li><a data-ajax="false" href="../../Page/Microwave/Microwavehistory.html" title="Microwave menu">Microwave</a></li>
+             <li><a data-ajax="false" href="../../Page/Electricrange/Electricrangehistory.html" title="Electricrange menu">Electricrange</a></li>
+             <li><a data-ajax="false" href="../../Page/Gasrange/Gasrangehistory.html" title="Gas menu">Gasrange</a></li>
+             <li><a data-ajax="false" href="../../Page/Roomac/Roomachistory.html" title="Roomac menu">Roomac</a></li>
+             <li><a data-ajax="false" href="../../Page/Refrigerator/Refrigeratorhistory.html" title="Refrigerator menu">Refrigerator</a></li>
+             <li><a data-ajax="false" href="../../Page/Centralac/Centralachistory.html" title="Centralac menu">Centralac</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script>
+
+    $(document).ready(function () {
+        debugger;
+
+        for (var i = 0; i < 30; i++) {
+            switch (i) {
+
+                case 0: loadData("page1", "../../Page/Microwave/Microwavebasic.html"); break;
+                case 1: loadData("page2", "../../Page/Microwave/Microwavelittlehistory.html"); break;
+                case 2: loadData("page3", "../../Page/Microwave/Microwavemain.html"); break;
+                case 3: loadData("page4", "../../Page/Microwave/menu.html"); break;
+                case 4: loadData("page5", "../../Page/Microwave/toploader.html"); break;
+                case 5: loadData("page6", "../../Page/Microwave/frontloader.html"); break;
+                case 6: loadData("page7", "../../Page/Microwave/Microwavebottom.html"); break;
+                case 7: loadData("page8", "../../Page/Microwave/Microwavebottom1.html"); break;
+                case 8: loadData("page9", "../../Page/Microwave/Evolution.html"); break;
+                case 9: loadData("page10", "../../Page/Microwave/Evolution1.html"); break;
+                case 10: loadData("page11", "../../Page/Microwave/nowthen.html"); break;
+                case 11: loadData("page12", "../../Page/Microwave/Popularpart.html"); break;
+                case 12: loadData("page13", "../../Page/Microwave/Evolution2.html"); break;
+                case 13: loadData("page14", "../../Page/Microwave/controlpanel.html"); break;
+                case 14: loadData("page15", "../../Page/Microwave/List1.html"); break;
+                case 15: loadData("page16", "../../Page/Microwave/door.html"); break;
+                case 16: loadData("page17", "../../Page/Microwave/List2.html"); break;
+                case 17: loadData("page18", "../../Page/Microwave/cabinet.html"); break;
+                case 18: loadData("page19", "../../Page/Microwave/List3.html"); break;
+                case 19: loadData("page20", "../../Page/Microwave/magnetron.html"); break;
+                case 20: loadData("page21", "../../Page/Microwave/List4.html"); break;
+                case 21: loadData("page22", "../../Page/Microwave/interior.html"); break;
+                case 22: loadData("page23", "../../Page/Microwave/List5.html"); break;
+                case 23: loadData("page24", "../../Page/Microwave/latch.html"); break;
+                case 24: loadData("page25", "../../Page/Microwave/List6.html"); break;
+                case 25: loadData("page26", "../../Page/Microwave/ventilation.html"); break;
+                case 26: loadData("page27", "../../Page/Microwave/List7.html"); break;
+                case 27: loadData("page28", "../../Page/Microwave/installation.html"); break;
+                case 28: loadData("page29", "../../Page/Microwave/List8.html"); break;
+                case 29: loadData("page30", "../../Page/Microwave/Microwavefinal.html"); break;
+              
+            }
+
+        }
+     //   myScroll.refresh();
+    });
+
+
+    function loadData(id, url) {
+
+        $("#" + id).load(url);
+    }
+</script>

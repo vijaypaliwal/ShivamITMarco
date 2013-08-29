@@ -1,0 +1,252 @@
+@font-face {
+	font-family: 'Arial_Type0_0';
+	src: local('Arial_Type0_0');
+	src: url('Arial_Type0_0.otf') format('opentype');
+}
+
+.fmt-0{font-style:normal;font-weight:bold;font-family:Arial_Type0_0,Arial,serif;color:#ffffff;font-size:55.9729pt;}
+
+@font-face {
+	font-family: 'Gulim_Type0_1';
+	src: local('Gulim_Type0_1');
+	src: url('Gulim_Type0_1.otf') format('opentype');
+}
+
+.fmt-1{font-style:normal;font-weight:normal;font-family:Gulim_Type0_1,Gulim,serif;color:#ffffff;font-size:55.9729pt;}
+
+@font-face {
+	font-family: 'Arial_TrueType_2';
+	src: local('Arial_TrueType_2');
+	src: url('Arial_TrueType_2.ttf') format('truetype');
+}
+
+.fmt-2{font-style:normal;font-weight:bold;font-family:Arial_TrueType_2,Arial,serif;color:#ffffff;font-size:14pt;}
+
+@font-face {
+	font-family: 'Gulim_TrueType_3';
+	src: local('Gulim_TrueType_3');
+	src: url('Gulim_TrueType_3.ttf') format('truetype');
+}
+
+.fmt-3{font-style:normal;font-weight:normal;font-family:Gulim_TrueType_3,Gulim,serif;color:#ffffff;font-size:14pt;}
+
+@font-face {
+	font-family: 'Arial_Type1_4';
+	src: local('Arial_Type1_4');
+	src: url('Arial_Type1_4.otf') format('opentype');
+}
+
+.fmt-4{font-style:normal;font-weight:normal;font-family:Arial_Type1_4,Arial,serif;color:#000000;font-size:8pt;}
+
+.fmt-5{font-style:normal;font-weight:normal;font-family:Gulim_TrueType_3,Gulim,serif;color:#000000;font-size:12pt;}
+
+@font-face {
+	font-family: 'Gulim_Type0_5';
+	src: local('Gulim_Type0_5');
+	src: url('Gulim_Type0_5.otf') format('opentype');
+}
+
+.fmt-6{font-style:normal;font-weight:normal;font-family:Gulim_Type0_5,Gulim,serif;color:#000000;font-size:12pt;}
+
+@font-face {
+	font-family: 'Gulim_TrueType_6';
+	src: local('Gulim_TrueType_6');
+	src: url('Gulim_TrueType_6.ttf') format('truetype');
+}
+
+.fmt-7{font-style:normal;font-weight:normal;font-family:Gulim_TrueType_6,Gulim,serif;color:#000000;font-size:18pt;}
+
+.fmt-8{font-style:normal;font-weight:normal;font-family:Arial_Type1_4,Arial,serif;color:#b20033;font-size:12pt;}
+
+@font-face {
+	font-family: 'Gulim_TrueType_7';
+	src: local('Gulim_TrueType_7');
+	src: url('Gulim_TrueType_7.ttf') format('truetype');
+}
+
+.fmt-9{font-style:normal;font-weight:normal;font-family:Gulim_TrueType_7,Gulim,serif;color:#000000;font-size:15pt;}
+
+.fmt-10{font-style:normal;font-weight:normal;font-family:Gulim,Gulim,serif;color:#e62a86;font-size:18pt;}
+
+.fmt-11{font-style:normal;font-weight:normal;font-family:Gulim,Gulim,serif;color:#10a933;font-size:18pt;}
+
+@font-face {
+	font-family: 'Gulim_Type1_8';
+	src: local('Gulim_Type1_8');
+	src: url('Gulim_Type1_8.otf') format('opentype');
+}
+
+.fmt-12{font-style:normal;font-weight:normal;font-family:Gulim_Type1_8,Gulim,serif;color:#ffffff;font-size:30.0291pt;}
+
+@font-face {
+	font-family: 'Arial_Type1_9';
+	src: local('Arial_Type1_9');
+	src: url('Arial_Type1_9.otf') format('opentype');
+}
+
+.fmt-13{font-style:normal;font-weight:bold;font-family:Arial_Type1_9,Arial,serif;color:#b20033;font-size:30.0291pt;}
+
+.fmt-14{font-style:normal;font-weight:bold;font-family:Arial_Type1_9,Arial,serif;color:#000000;font-size:30.0291pt;}
+
+.fmt-15{font-style:normal;font-weight:bold;font-family:Arial_TrueType_2,Arial,serif;color:#ffffff;font-size:14pt;}
+
+.fmt-16{font-style:normal;font-weight:normal;font-family:Gulim_TrueType_3,Gulim,serif;color:#ffffff;font-size:14pt;}
+
+.fmt-17{font-style:normal;font-weight:normal;font-family:Arial_Type1_4,Arial,serif;color:#000000;font-size:8pt;}
+
+.fmt-18{font-style:normal;font-weight:normal;font-family:Gulim_TrueType_3,Gulim,serif;color:#000000;font-size:11pt;}
+
+.fmt-19{font-style:normal;font-weight:normal;font-family:Gulim_TrueType_3,Gulim,serif;color:#b20033;font-size:11pt;}
+
+.fmt-20{font-style:normal;font-weight:normal;font-family:Gulim_Type0_5,Gulim,serif;color:#000000;font-size:11pt;}
+
+.fmt-21{font-style:normal;font-weight:bold;font-family:Arial_TrueType_2,Arial,serif;color:#000000;font-size:12pt;}
+
+.fmt-22{font-style:normal;font-weight:bold;font-family:Arial_TrueType_2,Arial,serif;color:#ffffff;font-size:17pt;}
+
+.fmt-23{font-style:normal;font-weight:normal;font-family:Gulim_TrueType_3,Gulim,serif;color:#000000;font-size:8pt;}
+
+.fmt-24{font-style:normal;font-weight:normal;font-family:Gulim_TrueType_6,Gulim,serif;color:#000000;font-size:18pt;}
+
+.fmt-25{font-style:normal;font-weight:normal;font-family:Arial_Type1_4,Arial,serif;color:#b20033;font-size:12pt;}
+
+.fmt-26{font-style:normal;font-weight:normal;font-family:Gulim_TrueType_7,Gulim,serif;color:#000000;font-size:12pt;}
+
+.fmt-27{font-style:normal;font-weight:normal;font-family:Gulim_TrueType_7,Gulim,serif;color:#000000;font-size:11pt;}
+
+.fmt-28{font-style:normal;font-weight:normal;font-family:Gulim,Gulim,serif;color:#a9c000;font-size:12pt;}
+
+.fmt-29{font-style:normal;font-weight:normal;font-family:Gulim_TrueType_7,Gulim,serif;color:#000000;font-size:12pt;}
+
+@font-face {
+	font-family: 'Arial_TrueType_10';
+	src: local('Arial_TrueType_10');
+	src: url('Arial_TrueType_10.ttf') format('truetype');
+}
+
+.fmt-30{font-style:normal;font-weight:bold;font-family:Arial_TrueType_10,Arial,serif;color:#ffffff;font-size:17pt;}
+
+.fmt-31{font-style:normal;font-weight:bold;font-family:Arial_TrueType_10,Arial,serif;color:#221f1f;font-size:12pt;}
+
+.fmt-32{font-style:normal;font-weight:bold;font-family:Arial_TrueType_2,Arial,serif;color:#000000;font-size:12pt;}
+
+.fmt-33{font-style:normal;font-weight:bold;font-family:Arial_TrueType_2,Arial,serif;color:#ffffff;font-size:17pt;}
+
+.fmt-34{font-style:normal;font-weight:normal;font-family:Arial_Type1_4,Arial,serif;color:#000000;font-size:9pt;}
+
+@font-face {
+	font-family: 'Arial_TrueType_11';
+	src: local('Arial_TrueType_11');
+	src: url('Arial_TrueType_11.ttf') format('truetype');
+}
+
+.fmt-35{font-style:normal;font-weight:bold;font-family:Arial_TrueType_11,Arial,serif;color:#221f1f;font-size:12pt;}
+
+.fmt-36{font-style:normal;font-weight:bold;font-family:Arial_TrueType_11,Arial,serif;color:#ffffff;font-size:17pt;}
+
+.fmt-37{font-style:normal;font-weight:bold;font-family:Arial_TrueType_11,Arial,serif;color:#221f1f;font-size:12pt;}
+
+.fmt-38{font-style:normal;font-weight:bold;font-family:Arial_Type1_9,Arial,serif;color:#000000;font-size:28.8pt;}
+
+.fmt-39{font-style:normal;font-weight:bold;font-family:Arial_Type1_9,Arial,serif;color:#b20033;font-size:28.8pt;}
+
+.fmt-40{font-style:normal;font-weight:normal;font-family:Arial_Type1_4,Arial,serif;color:#000000;font-size:8pt;}
+
+@font-face {
+	font-family: 'Arial_Type1_12';
+	src: local('Arial_Type1_12');
+	src: url('Arial_Type1_12.otf') format('opentype');
+}
+
+.fmt-41{font-style:normal;font-weight:bold;font-family:Arial_Type1_12,Arial,serif;color:#000000;font-size:9pt;}
+
+.fmt-42{font-style:normal;font-weight:normal;font-family:Arial_Type1_4,Arial,serif;color:#000000;font-size:9pt;}
+
+.fmt-43{font-style:normal;font-weight:normal;font-family:Gulim_TrueType_3,Gulim,serif;color:#ffffff;font-size:12pt;}
+
+.fmt-44{font-style:normal;font-weight:normal;font-family:Gulim_Type0_5,Gulim,serif;color:#ffffff;font-size:12pt;}
+
+.fmt-45{font-style:normal;font-weight:normal;font-family:Gulim_TrueType_3,Gulim,serif;color:#000000;font-size:10pt;}
+
+.fmt-46{font-style:normal;font-weight:normal;font-family:Gulim_Type0_5,Gulim,serif;color:#000000;font-size:10pt;}
+
+.fmt-47{font-style:normal;font-weight:normal;font-family:Gulim_TrueType_3,Gulim,serif;color:#b20033;font-size:10pt;}
+
+.fmt-48{font-style:normal;font-weight:normal;font-family:Gulim_TrueType_6,Gulim,serif;color:#000000;font-size:18pt;}
+
+.fmt-49{font-style:normal;font-weight:normal;font-family:Arial_Type1_4,Arial,serif;color:#b20033;font-size:12pt;}
+
+.fmt-50{font-style:normal;font-weight:bold;font-family:Arial_Type1_9,Arial,serif;color:#b20033;font-size:28.8pt;}
+
+.fmt-51{font-style:normal;font-weight:normal;font-family:Gulim_Type0_5,Gulim,serif;color:#000000;font-size:6.6pt;}
+
+.fmt-52{font-style:normal;font-weight:bold;font-family:Arial_TrueType_2,Arial,serif;color:#000000;font-size:13pt;}
+
+.fmt-53{font-style:normal;font-weight:normal;font-family:Arial_Type1_4,Arial,serif;color:#b20033;font-size:12pt;}
+
+.fmt-54{font-style:normal;font-weight:normal;font-family:Arial_Type1_4,Arial,serif;color:#000000;font-size:6.6pt;}
+
+.fmt-55{font-style:normal;font-weight:bold;font-family:Arial_TrueType_2,Arial,serif;color:#000000;font-size:12pt;}
+
+.fmt-56{font-style:normal;font-weight:bold;font-family:Arial_TrueType_2,Arial,serif;color:#000000;font-size:24pt;}
+
+.fmt-57{font-style:normal;font-weight:normal;font-family:Gulim_TrueType_3,Gulim,serif;color:#000000;font-size:11pt;}
+
+.fmt-58{font-style:normal;font-weight:normal;font-family:Gulim_Type0_5,Gulim,serif;color:#000000;font-size:11pt;}
+
+.fmt-59{font-style:normal;font-weight:normal;font-family:Gulim_TrueType_3,Gulim,serif;color:#b20033;font-size:11pt;}
+
+.fmt-60{font-style:normal;font-weight:bold;font-family:Arial_TrueType_2,Arial,serif;color:#000000;font-size:11pt;}
+
+.fmt-61{font-style:normal;font-weight:bold;font-family:Arial_TrueType_2,Arial,serif;color:#000000;font-size:20pt;}
+
+@font-face {
+	font-family: 'Arial_TrueType_13';
+	src: local('Arial_TrueType_13');
+	src: url('Arial_TrueType_13.ttf') format('truetype');
+}
+
+.fmt-62{font-style:normal;font-weight:bold;font-family:Arial_TrueType_13,Arial,serif;color:#221f1f;font-size:12pt;}
+
+.fmt-63{font-style:normal;font-weight:bold;font-family:Arial_TrueType_13,Arial,serif;color:#221f1f;font-size:8pt;}
+
+.fmt-64{font-style:normal;font-weight:normal;font-family:Arial_Type1_4,Arial,serif;color:#b20033;font-size:12pt;}
+
+.fmt-65{font-style:normal;font-weight:bold;font-family:Arial_TrueType_2,Arial,serif;color:#000000;font-size:8.91pt;}
+
+.fmt-66{font-style:normal;font-weight:bold;font-family:Arial_TrueType_2,Arial,serif;color:#b20033;font-size:8.91pt;}
+
+.fmt-67{font-style:normal;font-weight:normal;font-family:Gulim_TrueType_3,Gulim,serif;color:#000000;font-size:8.91pt;}
+
+.fmt-68{font-style:normal;font-weight:normal;font-family:Gulim_Type0_5,Gulim,serif;color:#000000;font-size:8.91pt;}
+
+@font-face {
+	font-family: 'Arial_TrueType_14';
+	src: local('Arial_TrueType_14');
+	src: url('Arial_TrueType_14.ttf') format('truetype');
+}
+
+.fmt-69{font-style:normal;font-weight:bold;font-family:Arial_TrueType_14,Arial,serif;color:#221f1f;font-size:12pt;}
+
+.fmt-70{font-style:normal;font-weight:bold;font-family:Arial_TrueType_2,Arial,serif;color:#b20033;font-size:11pt;}
+
+@font-face {
+	font-family: 'Arial_TrueType_15';
+	src: local('Arial_TrueType_15');
+	src: url('Arial_TrueType_15.ttf') format('truetype');
+}
+
+.fmt-71{font-style:normal;font-weight:bold;font-family:Arial_TrueType_15,Arial,serif;color:#221f1f;font-size:12pt;}
+
+@font-face {
+	font-family: 'Arial_TrueType_16';
+	src: local('Arial_TrueType_16');
+	src: url('Arial_TrueType_16.ttf') format('truetype');
+}
+
+.fmt-72{font-style:normal;font-weight:bold;font-family:Arial_TrueType_16,Arial,serif;color:#221f1f;font-size:9.72pt;}
+
+.fmt-73{font-style:normal;font-weight:normal;font-family:Gulim,Gulim,serif;color:#a9c000;font-size:20pt;}
+
+.fmt-74{font-style:normal;font-weight:normal;font-family:Gulim_TrueType_7,Gulim,serif;color:#000000;font-size:18pt;}
+
